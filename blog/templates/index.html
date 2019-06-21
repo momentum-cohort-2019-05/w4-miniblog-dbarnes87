@@ -1,0 +1,16 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+  <h1>Blog Nation</h1>
+  <p>Welcome to David's Blog Nation, a website developed by <em>Mozilla Developer Network</em>!</p>
+  <!-- <h2>Dynamic content</h2> -->
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis odit voluptate, magnam fuga tempore amet tempora error ipsam? Animi rem modi architecto veniam debitis, nobis ducimus facilis officia soluta provident!</p>
+  <p>The website has the following:</p>
+  <ul>
+    <li><strong>Blog Posts:</strong> {{ num_blog_posts }}</li>
+    <!-- <li><strong>Copies:</strong> {{ num_instances }}</li>
+    <li><strong>Copies available:</strong> {{ num_instances_available }}</li> -->
+    <li><strong>Bloggers:</strong> {{ num_bloggers }}</li>
+  </ul>
+
+{% endblock %}
