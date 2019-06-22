@@ -18,4 +18,5 @@ class BloggerAdmin(admin.ModelAdmin):
 
 @admin.register(Comment) 
 class CommentAdmin(admin.ModelAdmin):
-    pass
+    # pass
+    list_display = ('comment', 'post_date')
