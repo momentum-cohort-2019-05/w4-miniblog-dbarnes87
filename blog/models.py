@@ -2,6 +2,7 @@ from django.db.models import Model, CharField, DateTimeField, ForeignKey, TextFi
 from django.urls import reverse
 from datetime import date
 from django.db import models
+from django.conf import settings
 
 
 # Create your models here.
@@ -49,7 +50,7 @@ class Comment(Model):
 
     comment_blog_post = ForeignKey('BlogPost', on_delete=models.CASCADE, null=True)
 
-    author = models.CharField(max_length=200, default='')
+    user = models.ForeignKey(settings.AUTH_USER_MODEL, default=1, on_delete=models.CASCADE)
 
     comment = TextField(max_length=500, help_text="Enter a comment here")
 
