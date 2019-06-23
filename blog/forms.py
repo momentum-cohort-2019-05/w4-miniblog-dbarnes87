@@ -8,9 +8,14 @@ from django.shortcuts import get_object_or_404
 from django.shortcuts import render, redirect
 
 
-class CommentForm(forms.Form):
+class CommentForm(forms.ModelForm):
 
-    comment = forms.CharField(help_text="Enter your comment here.")
+    class Meta:
+        model = Comment
+        fields = ('comment',)
+
+    # comment = forms.CharField(help_text="Enter your comment here.")
+
 
 
 
