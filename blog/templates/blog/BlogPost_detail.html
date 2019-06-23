@@ -8,8 +8,7 @@
     <p><strong>Comments:</strong {{comment.comment}}></p>
         
         <hr>
-        <a class="btn btn-default" href="{% url 'add_comment' pk=blogpost.pk %}">Add comment</a>
-
+       
         {% for comment in blogpost.comment_set.all %}
         <div class="comment">
             <div class="date">{{ comment.created_date }}</div>
@@ -20,4 +19,6 @@
         {% empty %}
         <p>No comments here yet</p>
         {% endfor %}
+        <a href="{% url 'add_comment' pk=blogpost.pk %}">Add comment</a>
+
         {% endblock %}
