@@ -47,14 +47,17 @@ class Blogger(Model):
 
 class Comment(Model):
 
+    comment_blog_post = ForeignKey('BlogPost', on_delete=models.CASCADE, null=True)
+
+    author = models.CharField(max_length=200, default='')
+
     comment = TextField(max_length=500, help_text="Enter a comment here")
 
-    post_date = DateTimeField(auto_now_add=True)
+    comment_date = DateTimeField(auto_now_add=True)
 
-    target_blog_post = ForeignKey('BlogPost', on_delete=models.CASCADE, null=True)
-
+    
     class Meta:
-        ordering = ['-post_date']
+        ordering = ['-comment_date']
 
     def __str__(self):
         """String for representing the Model object."""
