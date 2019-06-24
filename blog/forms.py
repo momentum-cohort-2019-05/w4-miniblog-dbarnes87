@@ -12,7 +12,7 @@ class CommentForm(forms.ModelForm):
 
     class Meta:
         model = Comment
-        fields = ('comment',)
+        fields = ('comment', 'comment_blog_post')
 
     # comment = forms.CharField(help_text="Enter your comment here.")
 

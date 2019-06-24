@@ -3,9 +3,10 @@
 {% block content %}
 <h1>{{ blogpost.title}}</h1>
 
+<p><strong>Post Date: </strong>{{ blogpost.post_date}}</p>
 <p><strong>Blogger:  </strong><a href="{% url 'blogger-detail' blogpost.blogger.pk %}">{{ blogpost.blogger }}</a>
-    <p><strong>Post:</strong> {{ blogpost.post }}</p>
-    <p><strong>Comments:</strong {{comment.comment}}></p>
+    <p><strong>Description:</strong> {{ blogpost.post }}</p>
+    <p><strong>Comments</strong {{comment.comment}}></p>
         
         <hr>
        

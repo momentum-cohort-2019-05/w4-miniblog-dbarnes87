@@ -58,7 +58,7 @@ class Comment(Model):
 
     
     class Meta:
-        ordering = ['-comment_date']
+        ordering = ['comment_date']
 
     def __str__(self):
         """String for representing the Model object."""

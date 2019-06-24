@@ -4,3 +4,7 @@
     list-style: none;
     /* background-color: red; */
 }
+
+.pagination {
+    padding-left: 175px;
+}
